@@ -1,0 +1,26 @@
+/* 
+Theme Name: Genesis Material Design Theme
+Theme URI: http://www.yudiqing.com/material-genesis
+Description: This is the starter sample theme created for the Genesis Framework with mobile first and in material design theme.
+Author: Vincent Yu
+Author URI: http://www.yudiqing.com/
+
+Template: genesis
+Template Version: 2.2.3
+
+Text Domain: material_genesis
+Tags: black, orange, white, one-column, two-columns, three-columns, left-sidebar, right-sidebar, responsive-layout, custom-menu, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+License: GPL-3.0+
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+*/
+
+@import 'bourbon';
+@import 'neat';
+@import '../../node_modules/sass-rem/rem';
+
+@import 'utilities/index';
+@import 'base/index';
+@import 'layouts/index';
+@import 'components/index';
+@import 'plugins/index';
+@import 'views/index';
