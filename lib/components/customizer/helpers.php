@@ -18,7 +18,7 @@ namespace GenesisMaterial\Customizer;
  * @return string
  */
 function get_settings_prefix() {
-	return 'developers';
+	return 'genesis_material';
 }
 
 /**

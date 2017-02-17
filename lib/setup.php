@@ -1,6 +1,6 @@
 <?php
 /**
- * Description
+ * Set up child theme
  *
  * @package     GenesisMaterial
  * @since       1.0.0
@@ -21,10 +21,34 @@ add_action( 'genesis_setup', __NAMESPACE__ . '\setup_child_theme' );
 function setup_child_theme() {
 	load_child_theme_textdomain( CHILD_TEXT_DOMAIN, apply_filters( 'child_theme_textdomain', CHILD_THEME_DIR . '/languages', CHILD_TEXT_DOMAIN ) );
 
+    unregister_site_layouts();
+
 	unregister_genesis_callbacks();
 
 	adds_theme_supports();
 	adds_new_image_sizes();
+}
+
+/**
+ * Register the initial layouts
+ * @param void
+ * @return void
+ */
+function unregister_site_layouts(){
+    $layouts = array(
+        'content-sidebar',
+        'sidebar-content',
+        'content-sidebar-sidebar',
+        'sidebar-sidebar-content',
+        'sidebar-content-sidebar',
+//         'full-width-content',
+    );
+
+    foreach ($layouts as $layout) {
+        genesis_unregister_layout( $layout );
+    }
+
+    genesis_set_default_layout( 'full-width-content' );
 }
 
 /**

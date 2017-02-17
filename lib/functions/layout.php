@@ -19,3 +19,25 @@ namespace GenesisMaterial;
  function disable_structural_wraps($structural_wraps ){
     return $structural_wraps = [];
 }
+
+// /**
+//  * Un-Register the initial layouts
+//  *
+//  * @return void
+//  */
+// function unregister_site_layouts(){
+//     $layouts = array(
+//         'content-sidebar',
+//         'sidebar-content',
+//         'content-sidebar-sidebar',
+//         'sidebar-sidebar-content',
+//         'sidebar-content-sidebar',
+////         'full-width-content',
+//     );
+//
+//     foreach ($layouts as $layout) {
+//         genesis_unregister_layout( $layout );
+//     }
+//}
+//
+//unregister_site_layouts();
